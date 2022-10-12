@@ -74,7 +74,11 @@ export class TransactionProcessorService {
 
     if (scFunctionName === DelegationDataEnum.makeNewContractFromValidatorData && providerAddresses.includes(userAddress)) {
       await this.cacheManager.setNewContractCreator(userAddress);
+      return;
+    }
 
+    if (scFunctionName === DelegationDataEnum.createNewDelegationContract && transaction.receiver === elrondConfig.stakingContract) {
+      await this.cacheManager.setNewContractCreator(userAddress);
       return;
     }
 

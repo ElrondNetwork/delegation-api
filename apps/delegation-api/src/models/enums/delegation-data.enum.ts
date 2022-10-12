@@ -8,6 +8,7 @@ export enum DelegationDataEnum {
   mergeValidatorToDelegationSameOwner = 'mergeValidatorToDelegationSameOwner',
   changeServiceFee = 'changeServiceFee',
   makeNewContractFromValidatorData = 'makeNewContractFromValidatorData',
+  createNewDelegationContract = 'createNewDelegationContract',
   unStakeNodes = 'unStakeNodes',
   modifyTotalDelegationCap = 'modifyTotalDelegationCap',
   changeOwner = 'changeOwner',
